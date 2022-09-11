@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  padding: 1em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: grid;
+  place-items: center;
+  gap: 1em;
+  text-align: center;
+}
+
+p {
+  font-size: xx-large;
+}
+
+#game-container {
+  background-color: papayawhip;
+  padding: 1em;
+}
+
+button {
+  background-color: lightcoral;
+  border: 0;
+  padding: .5em;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: coral;
+}
+
+.hidden {
+  display: none;
+}
+
+#progress-bar-container {
+  width: 100%;
+}
+#progress-bar {
+  width: 100%;
+  position: relative;
+  height: 2ch;
+  background-color: papayawhip;
+}
+#progress-bar #progress {
+  position: absolute;
+  width: 0;
+  left: 0;
+  height: 100%;
+  background-color: lightcoral;
+  transition: width .5s ease;
+}
+
+#progress-bar p {
+  font-size: small;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+li {
+  font-size: x-large;
+}
