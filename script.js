@@ -1,6 +1,6 @@
 const randInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 const randChoice = (array) => array[randInt(0, array.length - 1)];
-const getData = async () => (await fetch("/data.json")).text();
+const getData = async () => (await fetch("gcse.json")).text();
 const hide = (element) => element.classList.add("hidden");
 const show = (element) => element.classList.remove("hidden");
 const includesMultiple = (array, values) =>
@@ -83,7 +83,7 @@ const formatData = (current) =>
 
 function updateProgress() {
   const numberLearnt = dataLength - Object.keys(data).length;
-  const percentage = (numberLearnt / dataLength) * 100
+  const percentage = (numberLearnt / dataLength) * 100;
   progressPercentageOutput.innerText = `${Math.round(percentage)}%`;
   progress.style.width = `${percentage}%`;
   numberLearntOutput.innerText = numberLearnt.toString();
